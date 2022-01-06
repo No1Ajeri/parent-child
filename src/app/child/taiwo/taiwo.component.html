@@ -1,0 +1,6 @@
+<h1>Welcome to Taiwo's world</h1>
+<p>Today's Beverage is <b>{{Beverages}}</b></p>
+<!--Templates below are designed for output decorators only-->
+<label for="beverage-input">Add a Beverage:</label>
+<input type="text" id="beverage-input" #newBeverage/>&nbsp;
+<button (click)="addNewBeverage(newBeverage.value)">Add</button>

@@ -1,0 +1,15 @@
+<!-- <p>dashboard works!</p> -->
+<div class="ChildRoutes">
+    <ul>                <!--Alias for Event Binding-->
+        <li *ngFor = "let bev of  beverages">{{bev}}</li>
+    </ul>
+   <app-taiwo [Beverages] = "currentBeverage"  (newBeverageEvent) = "addBeverage($event)"></app-taiwo>    <!--[Beverage] is property Binding, and is subituted for coffee in parent component-->
+<!--(newBeverageEvent) is a one-way Binding for same output decorations via event Binding-->
+<!--Note that functionName($event) has an event Binding that uses <input/> as medium-->
+   <app-kehinde></app-kehinde>
+</div>
+<br>
+<p>
+    <button (click)="toTaiwo()">To Taiwo</button> &nbsp; &nbsp;
+    <button (click)="toKehinde()">To Kehinde</button>
+</p>
